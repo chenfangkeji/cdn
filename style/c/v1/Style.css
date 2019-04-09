@@ -1,0 +1,232 @@
+﻿@import url("../../general.css");
+/*!
+@Name:   CMC style
+@Author: Jack 
+@Blog:   
+@Ver:    1.1  2019-01-25
+*/
+body { background: url(sysbg.jpg); }
+a, a:link { text-decoration: none; color: black; }
+    a:hover { color: red; }
+.ico { background: url(ico.png) no-repeat; display: block; }
+.img { background-position: -1px -358px; width: 16px; height: 18px; cursor: pointer; }
+.imgEdit { background-position: -1px -408px; width: 16px; height: 18px; cursor: pointer; margin-left: 2px; }
+.imgComment { background-position: -1px -433px; width: 18px; height: 19px; cursor: pointer; margin-left: 2px; }
+
+.Validform { display: inline-block; }
+input, textarea { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+input { background: white; /*#f8f8f8;*/ }
+    input[type=date] { width: 110px !important; }
+    input[disabled='disabled'] { background: #f8f8f8;}
+    input[type=checkbox], input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=radio], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea { border: 1px solid #ddd; -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.07); box-shadow: inset 0 1px 2px rgba(0,0,0,.07); color: #333; outline: 0; -webkit-transition: .05s border-color ease-in-out; transition: .05s border-color ease-in-out; }
+
+        input[type=date]:focus, input[type=month]:focus, input[type=number]:focus, input[type=password]:focus, input[type=radio]:focus, input[type=search]:focus, input[type=tel]:focus, input[type=text]:focus, input[type=time]:focus, input[type=url]:focus, input[type=week]:focus, select:focus, textarea:focus { border-color: #5b9dd9; -webkit-box-shadow: 0 0 2px rgba(30,140,190,.8); box-shadow: 0 0 2px rgba(30,140,190,.8); }
+
+    input.error { border-color: #f31212; -webkit-box-shadow: 0 0 2px rgba(251,138,138,.8); box-shadow: 0 0 2px rgba(251,138,138,.8); }
+    input.Validform_error, select.Validform_error { height: 30px; }
+
+
+select::-ms-expand { display: none; }
+.viewboxs { padding: 20px; }
+    .viewboxs .Interface td, .viewboxs .LInterface td { white-space: normal; }
+.loginform { width: 650px; height: 480px; margin: 0 auto; background: white; padding: 15px; border: 1px solid #b6b6b6; -webkit-box-shadow: 6px 6px 6px #727272; -moz-box-shadow: 6px 6px 6px #727272; box-shadow: 6px 6px 6px #727272; }
+    .loginform .loginbox { border-top: 1px dotted #0094ff; overflow: hidden; margin-top: 12px; padding-bottom: 6px; padding-top: 8px; border-bottom: 1px dotted #0094ff; }
+        .loginform .loginbox li { display: block; float: left; }
+            .loginform .loginbox li.txt { padding: 7px 0; }
+        .loginform .loginbox input[type=text], .loginform .loginbox input[type=password] { height: 30px; padding-left: 2px; margin-left: 3px; }
+    .loginform .systitle { height: 33px; overflow: hidden; }
+        .loginform .systitle a { font-size: 20px; font-weight: bold; font-family: 微软雅黑; letter-spacing: 2px; color: #333; text-shadow: 0 1px 1px rgba(0,0,0,0.4); text-decoration: none; display: block; float: left; margin-top: 5px; }
+            .loginform .systitle a.e { font-size: 12px; letter-spacing: -1px; font-weight: normal; margin: 17px 0 0 5px; }
+            .loginform .systitle a:hover { color: red; }
+    .loginform .version { text-align: right; padding-right: 8px; padding-top: 25px; }
+    .loginform .bottom { background-position: bottom; background: url(cPF.png); display: block; width: 575px; height: 14px; }
+    .loginform .valiCode { height: 20px; border: 1px solid #900404; display: block; cursor: pointer; width: 50px; }
+/*.loginform  .Validform_right { width:1px; visibility:hidden;}*/
+.copyright { line-height: 19px; font-family: Arial; margin: 0 auto; width: 500px; text-align: center; /*text-transform: uppercase;*/ margin-top: 9px; }
+    .copyright .sysupdate { color: #02b60b; }
+    .copyright a { color: red; }
+        .copyright a:hover { text-decoration: underline; }
+
+img.vCode { cursor: pointer; width: 70px; height: 28px; border: 1px solid #8b0303; }
+.btnviewImg, .btnUpLoadImg { cursor: pointer; }
+.manageimgpreview { margin: 15px 15px 10px 15px; }
+    .manageimgpreview img { width: 100%; }
+a.goClose:link, a.goClose:visited { display: block; float: right; margin: 2px 10px 0 0; color: white; cursor: pointer; font-size: 12px; }
+a.goClose:hover { color: red; }
+a.aBtn { cursor: pointer; }
+.rmb { font-family: Arial; }
+    .rmb::before { content: '¥'; }
+
+/*附件*/
+.attachmentList { width: 660px; height: 212px; margin-left: 20px; /*overflow: hidden;*/ border-top: 2px solid #449D44; padding-top: 8px; position: absolute; /* z-index:5;*/ }
+    .attachmentList .box { margin: 0 auto; position: relative; overflow: hidden; height: 100%; width: 100%; /*z-index:90; top:-10px;*/ margin-top: 8px; }
+.attachmentListCount { /*border:1px solid red;*/ height: 10px; min-width: 50px; background: white; position: absolute; z-index: 9999; top: -10px; left: 10px; padding: 0 5px; }
+.attachmentList .imgList img { width: 100%; }
+.attachmentList .imgList a { display: block; float: left; width: 100%; /*background:white;*/ color: #838383; /*border-bottom:1px solid #cccccc*/ overflow: hidden; }
+    .attachmentList .imgList a.vedit,
+    .attachmentList .imgList a.vdel { width: 50%; }
+    .attachmentList .imgList a.vedit, .imgList a.vname, .imgList a.vdel { padding: 6px 0; height: 12px; text-align: center; }
+    .attachmentList .imgList a.vedit { color: #049416; }
+    .attachmentList .imgList a.vdel { color: #ff6a00; }
+    .attachmentList .imgList a.vimg { height: 140px; background: white; }
+
+.attachmentList .og_prev, .og_next { width: 30px; height: 50px; background: url(next_prev.png) no-repeat; background: url(next_prev_ie6.png) no-repeat\9; position: absolute; z-index: 999; cursor: pointer; filter: alpha(opacity=70); top: 80px; opacity: 0.7; }
+.attachmentList .og_prev { background-position: 0 -60px; left: 0px; }
+.attachmentList .og_next { background-position: 0 0; right: 4px; }
+
+/*打印*/
+.printBox table { width: 100%; }
+.printBox thead td { height: 30px !important; padding: 0 !important; /*padding-bottom:10px;*/ }
+.printBox th { border: 1px solid black; /*border-bottom: 0; border-right: 0;*/ text-align: center; padding: 2px; }
+.printBox tbody td { border: 1px solid black !important; }
+.printBox .printHead span { font-size: 14px; padding: 0 !important; height: 10px; margin: 0 !important; }
+
+/*操作主界面样式*/
+.MainForm { width: 100%; background: white; height: 100%; }
+    .MainForm .fromTable { width: 100%; }
+        .MainForm .fromTable .dohead { height: 60px; border-bottom: 1px solid #dddddd; margin-left: 15px; overflow: hidden; width: 100%; }
+            .MainForm .fromTable .dohead span { display: block; float: left; }
+                .MainForm .fromTable .dohead span.doTitle { margin-top: 20px; padding-left: 6px; border-left: 2px solid #88B7E0; color: black; font-size: 14px; }
+                    .MainForm .fromTable .dohead span.doTitle a { vertical-align: super; padding-top: 5px; font-size: 12px; font-family: Arial; color: red; cursor: help; }
+                .MainForm .fromTable .dohead span.plusmenu { margin-top: 30px; float: right; display: none; }
+
+        .MainForm .fromTable table.gv, .MainForm .fromTable table.fv { margin: 15px; background-color: white; border-collapse: separate; border-spacing: 0px; border-left: 1px solid #e1e6eb; border-right: 1px solid #e1e6eb; width: 100%; }
+
+        .MainForm .fromTable table.fv { border: 0; }
+        .MainForm .fromTable table td { border-bottom: 1px solid #e1e6eb; color: #333; white-space: nowrap; }
+        .MainForm .fromTable table.fv td { border: 0; }
+
+    /*.MainForm .fromTable table.fv .floatlist { display: block; float: left; margin-right: 10px; }
+            .MainForm .fromTable table.fv .floatlist label { margin: -3px 5px 0 2px; display: inline-block; float: left; }
+            .MainForm .fromTable table.fv .floatlist input { float: left; }
+        */
+
+    .MainForm table.fv .cblspan { overflow: hidden; }
+        .MainForm table.fv .cblspan span { min-width: 90px; float: left; display: block; overflow: hidden; height: 30px; white-space: nowrap }
+    .MainForm table.fv td.cblspan label { display: block; float: left; margin: 2px 10px 5px 0px; overflow: hidden; min-width: 190px; }
+        .MainForm table.fv td.cblspan label input { float: left; display: block; margin: 3px 1px 0; }
+
+    .MainForm .fromTable .Nesting { width: 100%; }
+        .MainForm .fromTable .Nesting .tdR { padding-left: 0px; }
+        .MainForm .fromTable .Nesting .tdTop td { padding-top: 5px; }
+    .MainForm .fromTable tdM .Nesting .tdR input { width: 100%; }
+    .MainForm .fromTable .Nesting .tdL { text-align: right; width: 40px; padding-left: 20px; white-space: nowrap; padding-right: 3px; padding-left: 0px; }
+    .MainForm .fromTable td, .MainForm .fromTable th { padding: 0 8px 0 8px; height: 45px; }
+    .MainForm .fromTable table.gv tfoot td { height: 45px; background: #f5f6fa; }
+
+    .MainForm .fromTable table.gv #delId { display: block; margin-top: 2px; float: right; margin-right: -16px; }
+
+    .MainForm .fromTable table.gv { display: none; }
+
+        .MainForm .fromTable table.gv th { background: #f5f6fa; color: #777; white-space: nowrap; border-top: 1px solid #e1e6eb; border-bottom: 1px solid #e1e6eb; font-weight: normal; height: 45px; }
+        .MainForm .fromTable table.gv td { padding: 0 10px 0 10px; background: white; height: 40px; }
+        .MainForm .fromTable table.gv tbody tr:hover td { /*background: #f9f9f9;*/ background: #fea163 !important; }
+        .MainForm .fromTable table.gv td span { display: block; float: left; margin-right: 2px; }
+
+            .MainForm .fromTable table.gv td span.chbox { float: right; margin-right: -18px; margin-top: 7px; }
+
+        .MainForm .fromTable table.gv td.gridpage { overflow: hidden; height: 100%; padding-top: 16px; background: #f5f6fa; }
+            .MainForm .fromTable table.gv td .gridpage span { display: block; float: right; margin: 0 6px 0 6px; height: 15px; }
+            .MainForm .fromTable table.gv td .gridpage label { display: block; float: left; margin-top: -3px; margin-left: 2px; }
+        .MainForm .fromTable table.gv select { border-radius: 3px; height: 28px; }
+        .MainForm .fromTable table.gv td .gridpage input { display: block; float: left; }
+        .MainForm .fromTable table.gv td .gridpage span.doaction { margin-top: 2px; float: left; }
+        .MainForm .fromTable table.gv td .gridpage span.span_gopage { margin-top: -5.5px; }
+        .MainForm .fromTable table.gv td .gridpage span.doaction button { margin-top: -8px; margin-left: 8px; }
+
+    .MainForm .fromTable table.fv td.tdLw, label.tdLw { text-align: right !important; width: 60px; white-space: nowrap; border-right: 1px dotted #e1e6eb; }
+    .MainForm .fromTable table.fv td.tdR input[type=date], .MainForm .fromTable table.fv td.tdR input[type=text], .MainForm .fromTable table.fv td.tdR textarea { width: 98%; border-radius: 3px; height: 28px; padding-left: 5px; }
+    .MainForm .fromTable table.fv td.tdR select { border-radius: 3px; height: 28px; }
+    .MainForm .fromTable table.fv td.tdetxt textarea { height: 150px; }
+    .MainForm .fromTable table.fv td.tdR textarea { min-height: 100px; padding: 5px; }
+    .MainForm .fromTable table.fv td.tdetxt { padding-bottom: 6px; }
+    .MainForm .fromTable table.fv td.tdRb { border-top: 1px dotted #e1e6eb; }
+    .MainForm .fromTable table.fv td.mkAcInfo { padding-bottom: 8px; }
+        .MainForm .fromTable table.fv td.mkAcInfo span { display: block; overflow: hidden; min-width: 200px; line-height: 25px; height: 25px; }
+            .MainForm .fromTable table.fv td.mkAcInfo span a { display: inline-block; margin-right: 8px; min-width: 110px; }
+                .MainForm .fromTable table.fv td.mkAcInfo span a:first-child { width: 120px; text-align: right; }
+
+.ulList ul { display: block; overflow: hidden; width: 100%; }
+.ulList li { display: block; float: left; overflow: hidden; width: 100px; }
+    .ulList li span { display: block; float: left; }
+        .ulList li span.cbox { margin-top: 3px; }
+
+/*图片预览弹层样式*/
+.imgpop { position: absolute; z-index: 99; width: 200px; padding: 5px 5px 1px 5px; border: 1px solid #bdbcbc; border-radius: 2px; background: url(tm_white_70.png);top: 0;left: 0; overflow: hidden;}
+    .imgpop img { width: 100%; }
+.imgpreview { width: 300px; }
+    .imgpreview img { width: 100%; }
+
+
+/*viewbox label*/
+.viewbox { margin: 10px; }
+    .viewbox label { height: 25px; line-height: 25px; display: inline-block; padding-left: 3px !important; padding-right: 3px !important; border-bottom: 1px dotted #e1e6eb; }
+        .viewbox label.tdLw { border-bottom: 0; }
+
+
+/*日志等级色标*/
+.LogsLevel1 { color: #02b60b }
+.LogsLevel2 { color: #d58512 }
+.LogsLevel3 { color: #900404 }
+.LogsLevel4 { color: red; }
+.LogsLevel0 { color: #008080 }
+
+/*列表图片预览图标*/
+
+/*框架页面样式*/
+.MainForm table.winFrame { width: 100%; height: 100%; }
+.MainForm .mainTop { height: 50px; background: #373D41; }
+    .MainForm .mainTop a { color: white; display: block; float: left; }
+    .MainForm .mainTop span { display: block; /*width: 45%;*/ float: left; overflow: hidden; /*height: 100%;*/ /*border: 1px solid red;*/ }
+    .MainForm .mainTop .maintopright { float: right; }
+        .MainForm .mainTop .maintopright a { margin: 25px 8px 0px; float: right; }
+    .MainForm .mainTop a.LBwebSiteName { font-size: 16px; padding-left: 6px; margin-top: 12px; }
+    .MainForm .mainTop a.LBVer { margin-top: 13px; margin-left: 2px; }
+    .MainForm .mainTop .maintopright a:hover { text-decoration: none; border-bottom: 2px solid #02b60b; color: #02b60b; }
+
+.MainForm .mainLeftw { width: 30px; background: #42485b; }
+.MainForm .mainLeft { width: 220px !important; background: #D9ECF3; vertical-align: top; }
+
+    .MainForm .mainLeft .mainleftdiv { overflow-y: auto; }
+    .MainForm .mainLeft .mainLeftMenu { overflow: hidden; }
+
+    .MainForm .mainLeft .menugroup { border-top: 1px solid #bbd1dc; width: 100%; margin: 0 auto; overflow: hidden; }
+        .MainForm .mainLeft .menugroup span { display: block; border-top: 1px solid white; height: 20px; border-bottom: 1px solid #bbd1dc; padding: 8px 5px 5px 20px; background: url(ico.png) no-repeat #c7e3ef; font-weight: bold; color: #004458; width: 100%; cursor: pointer; }
+
+            .MainForm .mainLeft .menugroup span:hover, .MainForm .mainLeft .menugroup span.on:hover { background-color: #fa5704; /*#f8440a;*/ }
+            .MainForm .mainLeft .menugroup span.on { background: url(ico.png) 0 -62px no-repeat #fea163; }
+        .MainForm .mainLeft .menugroup ul { display: block; }
+        .MainForm .mainLeft .menugroup li { border-top: 1px solid white; border-bottom: 1px solid #bbd1dc; height: 20px; padding: 6px 5px 5px 35px; background: url(ico.png) -6px -31px no-repeat; overflow: hidden; /*border-left:1px solid #727272*/ }
+            .MainForm .mainLeft .menugroup li:hover, .MainForm .mainLeft .menugroup li.on { /*background-color: #fea163;*/ background-color: white; }
+
+.MainForm .mainRight { vertical-align: top; background: white; }
+    .MainForm .mainRight .mainrightframe { width: 100%; display: block; overflow-x: hidden; overflow-y: scroll; visibility: inherit; }
+    .MainForm .mainRight .mfsbox { width: 100%; background: #D9ECF3; height: 23px; font-family: Arial; padding-top: 7px; text-align: right; }
+        .MainForm .mainRight .mfsbox::after { content: ' '; }
+        .MainForm .mainRight .mfsbox .sysupdate { padding-right: 10px; color: #02b60b; }
+        .MainForm .mainRight .mfsbox a { color: red; }
+            .MainForm .mainRight .mfsbox a:hover { text-decoration: underline; /*font-weight:bold;*/ }
+
+.frInterface { width: 100%; }
+
+.TreeToic { display: block; float: left; margin-top: 0px; }
+.tree_folder { background: url(ico.png) 0 -185px; display: block; float: left; width: 22px; height: 22px; margin-top: -2px; }
+.tree_plusmiddle { background: url(ico.png) 0 -218px; display: block; float: left; width: 16px; height: 22px; }
+.tree_plusbottom { background: url(ico.png) 0 -250px; display: block; float: left; width: 16px; height: 22px; }
+.tree_minusmiddle { background: url(ico.png) -22px -218px; display: block; float: left; width: 19px; height: 22px; }
+.tree_minusbottom { background: url(ico.png) -23px -186px; display: block; float: left; width: 16px; height: 22px; }
+.tree_line { background: url(ico.png) 0 -286px; width: 16px; height: 22px; display: block; float: left; }
+
+.plusBox { border: 1px solid #e0e0e0; width: 125px; background: #f8f8f8; overflow: hidden; position: absolute; top: 0px; right: 0px; z-index: 99; display: none; }
+    .plusBox ul { display: block; width: 105px; margin: 0px auto; background: #3f3f3f; margin-bottom: 10px; padding-bottom: 3px; }
+        .plusBox ul li { display: block; height: 30px; overflow: hidden; color: #eeeeee; /*padding: 10px 0 10px 0;*/ }
+            .plusBox ul li.ta { height: 30px; background: #f8f8f8; color: #3f3f3f; font-family: 微软雅黑; padding: 0; font-size: 14px; }
+            .plusBox ul li:last-child { padding-bottom: 6px; }
+
+            .plusBox ul li.ta label { display: inline-block; margin: 5px 0; }
+            .plusBox ul li.ta a { display: inline-block; float: right; font-size: 0px; font-family: Arial; margin: 8px 5px 0 0; color: #3f3f3f; width: 14px; height: 14px; background: url(ico.png) -2px -389px; }
+            .plusBox ul li.tm { height: 40px; }
+            .plusBox ul li a { display: block; padding-bottom: 3px; border-bottom: 1px dotted #eeeeee; color: #eeeeee; text-decoration: none; /*width:80px;*/ margin: 8px; text-align: center; }
+                .plusBox ul li a:hover { color: red; }
+
+a.btn { color: white; }
